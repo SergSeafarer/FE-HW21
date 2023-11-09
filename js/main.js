@@ -21,8 +21,14 @@ class Student {
     this.gradesAverage = gradesSum / this.grades.length;
     return console.log('Average Grade of Student: ' + this.gradesAverage);
   }
-}
 
-const studentOne = new Student('Sergii', 'Melnychenko', 1993, [100, 95, 95, 100]);
-studentOne.calculateAge();
-studentOne.calculateGradesAverage();
+  present() {
+    this.lessonsCompleted < this.attendance.length ? this.attendance[this.lessonsCompleted] = 'true' : console.log('No more lessons for this student');
+    this.lessonsCompleted++;
+  }
+
+  absent() {
+    this.lessonsCompleted < this.attendance.length ? this.attendance[this.lessonsCompleted] = 'false' : console.log('No more lessons for this student');
+    this.lessonsCompleted++;
+  }
+}
